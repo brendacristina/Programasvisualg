@@ -1,34 +1,27 @@
 Algoritmo "triangulo"
-// Descrição   :informar o tipo de triangulo
+// Descrição   : informar o tipo de triangulo
 // Autor(a)    :Brenda Cristina
-// Data atual  : 07/06/2020
+// Data atual  : 22/06/2020
 Var
 a,b,c:real
-equilatero , isoceles , escaleno:logico
-
 
 Inicio
 //entrada
-
-escreval("digite o primeiro lado do triangulo")
+escreval("digite o primeiro lado do trianguo")
 leia(a)
 escreval("digite o segundo lado do trianguo")
 leia(b)
-escreval("digite o terceiro lado do triangulo")
+escreval("digite o terceiro lado do trianguo")
 leia(c)
 
-//processamento
+se((a<(b+c)) e (a >(abs(b-c)))) e ((b<(a+c)) e (b >(abs(a-c)))) e ((c<(b+a) e (c>(abs(b-a)))) entao
 
-equilatero<-(a=b) e (b=c) e (a=c)
-escaleno<-(a<>b) e (b<>c) e (a<>c)
-isoceles<-((a=b) e (b<>c)) ou ((b=c) e (c<>a))ou ((a=c) e (c<>b))
+((a-b) e (b-c) e (a-c))
+((a<>b)e(b<>c)e(a<>c))
+(((a-b)e(b<>c))ou((b-c)e(c<>a))ou((a-c)e(c<>b)))
 
-//saida
-
-escreval("equilatero" , equilatero)
-escreval("escaleno" , escaleno)
-escreval("isoceles" , isoceles)
-
-
+senao
+  escreval("valores não formam triangulo")
+finise
 
 Fimalgoritmo
